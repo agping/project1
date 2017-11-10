@@ -1,0 +1,186 @@
+   *{
+		margin: 0;
+		padding: 0;
+		font-family: 微软雅黑;
+	}
+	.login{
+		position: absolute;
+		top:0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		/*background-color:red; */
+		background-repeat: no-repeat;
+		background-size:cover;
+		background-position:center;
+		background-image:url(../img/login_spring.jpg);
+	}
+	.login .con{
+		width: 502px;
+		height: 508px;
+		position: absolute;
+		top:0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		text-align: center; 
+		overflow: hidden;
+		
+	}
+	.login .con .log-2{
+		width: 502px;
+		height: 410px;
+		border-radius:6px;
+		background-color: #fff; 
+		margin-top: 38px;
+		overflow: hidden;
+		/*background-color: red;*/
+	}
+	.login .con .log-2 p{
+		width: 412px;
+		border-bottom:1px solid #ccc;
+		margin:0 auto;
+		text-align: center; 
+		margin-bottom:28px; 
+		margin-top:15px;
+	}
+	.login .log-2 p span{
+		position: relative;
+		background-color: #fff;
+		font-size: 15px;
+		color: #666666;
+		top:9px;
+		padding:0 6px;
+
+	}
+	.login .log-2 input{
+		width: 310px;
+		height:36px;
+		border-radius:5px;
+		outline: none; 
+		border: 0;
+		border: 1px solid #DFDFDF;
+		text-indent: 10px;
+		margin-bottom: 9px;
+		color: #A9A9A9;
+		font-size: 14px;
+	}
+	.login .log-2 .in2{
+		background-image: url(../img/eye.png);
+		background-repeat: no-repeat;
+		background-size: 15px;
+		background-position: 98% 50%;
+	}
+	.login .log-2 .in4{
+		position: relative;
+	}
+	.login .log-2 .in4 .sp-1{
+	position: absolute;
+	top: 40px;
+	right: 80px;
+	font-size: 12px;
+	color: #59C4FF;
+	/*background-color: #75CEFF;*/
+	display: inline-block;
+	height: 30px;
+	width: 86px;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 3px;
+	/*opacity: 0.8;*/
+
+	}
+	.login .log-2 .in4 .sp-1:hover{
+		text-decoration: underline;
+	     cursor: pointer;
+	}
+	.login .log-2 .btn-2,.a1{
+		display: inline-block;
+		width: 152px;
+		height: 40px;
+		font-size:16px;
+		color:#fff;
+		/*float: left;*/
+		border-radius:20px;
+		/*margin:0 auto;*/
+		/*margin-top: 32px;*/
+		line-height: 40px;
+		margin-right: 5px;
+
+	}
+	.a1{
+	background-color: #fff;
+	border: 1px solid #59C4FF;
+	color:#59C4FF;	
+	}
+	.login .log-2 .btn-1{
+		display: inline-block;
+		margin-top: 32px;margin-right: 6px;
+	}
+	.login .log-2 .btn-2:hover .a1{
+		color:#52A0CB;
+		border: 1px solid #52A0CB; 
+	}
+	#btn2{
+       background-color:#52A0CB;
+	}
+	.login .log-2  .zuce{
+		color: #AAAAAA;
+		font-size: 14px;
+		margin-bottom: 25px;
+		cursor: pointer;
+	}
+	.login .log-2  .ft{
+		color: #59C4FF;
+		font-size: 14px;
+		cursor: pointer;
+	}
+	.login .log-2  .ft:hover{
+		color: #52A0CB;
+		cursor: pointer;
+	}
+	#btn2{
+		width: 152px;
+		height: 40px;
+		background-color: #75CEFF;
+		font-size:16px;
+		color:#fff;
+		border-radius:20px;
+		line-height: 40px;
+		border: none;
+		outline: none;
+		margin-right: 
+
+	}
+	.login .log-2 #btn2:hover{
+       background-color:#52A0CB;
+	}
+	.login .log-2 .tel-1 {
+		position: relative;
+		margin-bottom: 16px;
+	}
+
+	.login .log-2 .tel-1 .tel{
+		display: inline-block;
+		position: absolute;
+		top:38px;
+		left: 103px;
+		font-size: 13px;
+		color: red;
+	}
+		.login .log-2 .in4 {
+		position: relative;
+	}
+	.login .log-2 .in4 .pwd{
+		display: inline-block;
+		position: absolute;
+		top:38px;
+		left: 103px;
+		font-size: 13px;
+	}
+	.a1{
+		text-decoration: none;
+		color:#59C4FF;
+	}
+	

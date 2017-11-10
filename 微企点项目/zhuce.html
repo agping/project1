@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<link rel="stylesheet" href="css/zhuce.css">
+	<script src="jquery-3.2.1.min.js" ></script>
+	<style type="text/css">
+	#s9{
+		font-size: 15px;
+		/*display: inline-block;*/
+		/*margin-bottom: 5px;*/
+	}
+	#eye{
+		cursor: pointer;
+	}
+	.ft a{
+		text-decoration: none;
+		color: #75CEFF;
+		font-size: 12px;
+	}
+	.ft a:hover{
+		color: #8EADF7;
+	}	
+	</style>
+	
+</head>
+<body>
+	<div class="login">
+		<div class="con">
+			<div class="log-1"><img src="img/new_logo.png" alt=""></div>
+			<div class="log-2">
+				<p><span>使用手机注册</span></p>
+				<span id="s9"></span>
+				<div class="tel-1"><input type="text" placeholder="请输入常用手机号" name="userID" class="in1" id="tel-3" onblur="checkTel()"><span class="tel" id="s5"></span></div><br>
+				<div class="pwd-1">
+				<input type="password"  placeholder="请输入6-18位的密码" name="password" class="in2" id="pwd-3" onblur="checkPwd()">
+				<span class="img-1" id="eye"><img src="img/eye.png" alt="">
+				</span>
+				<span class="pwd" id="s3"></span></div><br>
+
+				<div class="in-4"><input type="text"  class="in3" placeholder="请输入短信验证码" id="yan1" onblur="checkYanz()" >
+				<span class="sp-1" id="sq">发送验证码</span><span class="yanz" id="s6"></span>
+				<span id="s7"></span>
+				<div class="btn" id="btn1"><button id="btn2">同意并注册</button></div><br>
+				</form>
+				<div class="zuce">《微企点用户账号注册》</div>
+				<div class="ft"><a href="denglu.html">已有账号，登录到微企点</a></div>
+			
+		</div>
+	</div>
+</body>
+<script> 
+ // 验证密码
+				$(".login .log-2 input").focus(function(){
+					$(this).css("color","#333333")
+				})
+				function checkPwd(){
+					var pwd=document.getElementById("pwd-3");
+					var reg=/^[A-Za-z0-9]{6,18}$/
+					var s3=document.getElementById("s3");
+				    if(reg.test(pwd.value)==true){
+				    	s3.innerHTML=" ";
+				    	s3.innerHTML="正确"
+				    	s3.style.color="green";
+				    	return true;
+				    }else{
+				    	s3.innerHTML=" ";
+				    	s3.innerHTML="密码格式有误"
+				    	s3.style.color="red"
+				    	return false;
+				    }
+				}
+				//验证手机
+				function checkTel(){
+					var tel=document.getElementById("tel-3");
+					var reg=/^1\d{10}$/
+					var s5=document.getElementById("s5");
+				    if(reg.test(tel.value)==true){
+				    	
+				    	s5.innerHTML=" ";
+				    	s5.innerHTML="正确"
+				    	s5.style.color="green";
+				    	return true;
+				    }else{
+				    	s5.innerHTML=" ";
+				    	s5.innerHTML="手机格式有误"
+				    	s5.style.color="red"
+				    	return false;
+				    }
+				}	
+				var s7=document.getElementById("s7");
+				s7.innerHTML=0;
+				var sq=document.getElementById("sq");
+					  function randomStr(){
+						var arr=[1,2,3,4,5,6,7,8,9,0,"q","w","e","r","t",
+						"y","u","i","o","p","a","s","d","f","g","h",
+						"j","k","z","x","c","v","b","n","m","Q","W","E","R","T",
+						"Y","U","I","P","A","S","D","F","G","H",
+						"J","K","L","Z","X","C","V","B","N","M"];
+						 var str="";
+						for(var i=0;i<3;i++){
+							str=str+arr[Math.floor(Math.random()*arr.length)];
+						}
+						var code=str;
+						s7.innerHTML=code;
+						alert(code);
+						}
+
+					  sq.onclick=randomStr;
+					   function checkYanz(){
+					   	var yan1=document.getElementById("yan1");
+					    var s6=document.getElementById("s6");
+					    if(yan1.value==s7.innerHTML){ 
+					   	s6.innerHTML="验证码格式正确"
+					   	s6.style.color="green";
+					   	return true;
+					   	}else if(yan1.value!=s7.innerHTML){
+					   	s6.innerHTML="验证码格式错误"
+					   	return false
+					   	}
+					   }
+
+
+
+				$(".login .log-2 input").focus(function(){
+					$(this).css("color","#333333")
+				})
+			 
+				  var btn=document.getElementById("btn2");
+				  btn.onclick=function(){
+				 	if(checkPwd()&&checkTel()&&checkYanz()){
+				  var tel=document.getElementById("tel-3");
+				  var pwd=document.getElementById("pwd-3");
+				  var s9=document.getElementById("s9");
+				  var s5=document.getElementById("s5");
+				  var s6=document.getElementById("s6");
+				  var s3=document.getElementById("s3");
+				  var xhr = new XMLHttpRequest();
+				  var uV = tel.value;//用户名
+				  var pV = pwd.value; //密码
+			  
+				  xhr.open("GET","http://datainfo.duapp.com/shopdata/userinfo.php?status=register&userID=" + uV + "&password=" +pV);
+				  xhr.send();				
+				  xhr.onreadystatechange = function(){
+				  if(xhr.status == 200 && xhr.readyState == 4){
+								var res = xhr.responseText;
+								if(res === "0"){
+								s9.innerHTML = "用户名已被注册";	
+								s5.innerHTML = " ";
+								s6.innerHTML = " ";
+								s3.innerHTML = " ";
+								s9.style.color="#f00"
+							}else if(res == "1"){
+								s9.innerHTML = "注册成功,3秒后跳转到登录页";
+								s9.style.color="#75CEFF"
+								setTimeout(function(){
+									window.location.href="denglu.html"
+								},3000)
+								}else if(res == "2"){
+								s9.innerHTML = "数据库报错";
+								s9.style.color="#00f"	
+								}	
+						}
+					}
+			 	}
+			 }
+			 //眼睛显示
+                 var btn=document.getElementById("eye");
+                 var pass=document.getElementById("pwd-3");
+                 btn.onmousedown=function(){
+                     pass.type="text"
+                 }
+                 btn.onmouseout=function(){
+                     pass.type="password"
+                 }	
+			</script>
+			</html>

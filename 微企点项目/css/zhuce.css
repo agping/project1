@@ -1,0 +1,177 @@
+	*{
+
+		margin: 0;
+		padding: 0;
+		font-family: 微软雅黑;
+	}
+	.login{
+		position: absolute;
+		top:0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		/*background-color:red; */
+		background-repeat: no-repeat;
+		background-size:cover;
+		background-position:center;
+		background-image:url(../img/login_spring.jpg);
+	}
+	.login .con{
+		width: 502px;
+		height: 508px;
+		/*background-color:green;*/
+		position: absolute;
+		top:0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		text-align: center; 
+		overflow: hidden;
+		
+	}
+	/*.login .con .log-1 img{
+		/*width: 140px;*/
+	
+	.login .con .log-2{
+		width: 502px;
+		height: 410px;
+		border-radius:6px;
+		background-color: #fff; 
+		margin-top: 38px;
+		overflow: hidden;
+		/*background-color: red;*/
+	}
+	.login .con .log-2 p{
+		width: 412px;
+		border-bottom:1px solid #ccc;
+		margin:0 auto;
+		text-align: center; 
+		margin-bottom:28px; 
+		margin-top:15px;
+	}
+	.login .log-2 p span{
+		position: relative;
+		background-color: #fff;
+		font-size: 16px;
+		color: #666666;
+		top:8px;
+		padding:0 6px;
+
+	}
+	.login .log-2 input{
+		width: 310px;
+		height:36px;
+		border-radius:5px;
+		outline: none; 
+		border: 0;
+		border: 1px solid #DFDFDF;
+		text-indent: 10px;
+		/*margin-bottom: 9px;*/
+		color: #A9A9A9;
+		font-size: 14px;
+	}
+	.login .log-2 .tel-1 {
+		position: relative;
+	}
+
+	.login .log-2 .tel-1 .tel{
+		display: inline-block;
+		position: absolute;
+		top:38px;
+		left: 103px;
+		font-size: 13px;
+		color: red;
+		/*display: none;*/
+	}
+	.login .log-2 .pwd-1 {
+		position: relative;
+	}
+	.login .log-2 .pwd-1 .img-1{
+		position:absolute;
+		top: 7px;
+		right:103px; 
+	}
+
+	.login .log-2 .pwd-1 .pwd{
+		display: inline-block;
+		position: absolute;
+		top:38px;
+		left: 103px;
+		font-size: 13px;
+		color: red;
+	}
+	.login .log-2 .in-4 .yanz{
+		display: inline-block;
+		position: absolute;
+		top:38px;
+		left: 103px;
+		font-size: 13px;
+		color: red;
+	}
+	.login .log-2 .in-4{
+		position: relative;
+	}
+	.login .log-2 .in-4 .sp-1{
+	position: absolute;
+	top: 4px;
+	right: 99px;
+	font-size: 12px;
+	color: #FFFFFF;
+	background-color: #75CEFF;
+	display: inline-block;
+	height: 30px;
+	width: 86px;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 3px;
+	/*opacity: 0.8;*/
+
+	}
+	.login .log-2 .in-4 .sp-1:hover{
+		background-color: #67C4FA;
+		cursor: pointer;
+    
+	}
+	#btn2{
+		/*display: inline-block;*/
+		width: 172px;
+		height: 38px;
+		background-color: #75CEFF;
+		font-size:16px;
+		color:#fff;
+		border-radius:19px;
+		margin:0 auto;
+		margin-top: 32px;
+		line-height: 38px;
+
+	}
+	.login .log-2 #btn2:hover{
+       background-color:#52A0CB;
+	}
+	.login .log-2  .zuce{
+		color: #AAAAAA;
+		font-size: 14px;
+		margin-top: -10px;
+		margin-bottom: 20px;
+		cursor: pointer;
+	}
+	.login .log-2  .zuce:hover{
+		color:#59C4FF; 
+	}
+	.login .log-2  .ft{
+		color: #59C4FF;
+		font-size: 14px;
+		cursor: pointer;
+	}
+	.login .log-2  .ft:hover{
+		color: #52A0CB;
+		cursor: pointer;
+	}
+	#s7{
+		display: none;
+	}
+	#btn2{
+		border:none;
+		outline: none;
+	}

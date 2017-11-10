@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>设计</title>
+	<style>
+	*{
+		padding: 0;
+		margin: 0;
+		font-family: 微软雅黑;
+		box-sizing:border-box;
+	}
+	.bg{
+		margin-top: 50px;
+		width: 100%;
+		height: 900px;
+		background-image: url(img/bg2.jpg);
+		background-repeat: no-repeat;
+		background-position: 50% -10%;
+		background-size:250% 100% ;
+	}
+	.bg .top{
+		width: 1200px;
+		height: 94px;
+		margin:0 auto;
+		/*background-color: #f00;*/
+
+	}
+	.bg .top img{
+		float: left;
+		margin-top: 15px;
+		margin-left: 70px;
+	}
+	.bg .top ul{
+		display: inline-block;
+		float: right;
+		list-style: none;
+	}
+	.bg .top ul li{
+		float: left;
+		width:90px;
+		height: 94px;
+		color: #fff;
+		line-height: 94px;
+		text-align: center;
+		font-size: 13px;
+	}
+	.bg .top ul li:hover{
+
+		cursor: pointer;
+		color: #3AD6AE;
+
+	}
+	.bg .top .li-1{
+		position: relative;
+	}
+	.bg .con{
+		width: 868px;
+		height: 330px;
+		margin:0 auto;
+		margin-top: 96px;
+		/*background-color: blue;*/
+		position: relative;
+		text-align: center;
+	}
+	.bg .con .img-1{
+		width: 868px;
+	}
+	.bg .con .img-2{
+		width: 140px;
+		position: absolute;
+		top: -70px;
+		left: 42%;
+	}
+	.bg .con .sp-1{
+		position: absolute;
+		top: 35%;
+		left: 15%;
+		color: #fff;
+		font-size: 40px;
+		font-weight: 600;
+	}
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	color: #fff;
+	font-size: 14px;
+	background-color: #373737;
+	z-index: 6;
+}
+.header .left{
+	/*margin-left: 20px;*/
+	display: inline-block;
+	float: left;
+
+}
+.header .left .sp-1{
+	display: inline-block;
+	width: 80px;
+	height: 50px;
+	border:1px solid #444444;
+	text-align: center;
+	padding-top: 6px;
+}
+.header .left .sp-2{
+	display: inline-block;
+	width: 198px;
+	height: 32px;
+	padding-left: 5px;
+	line-height: 32px;
+	background-color: #464646;
+	position: relative;
+	top: -5px;
+	margin-left: 16px;
+	border-radius: 5px;
+	border:1px solid #464646;
+	margin-right: 30px;
+
+}
+.header .left .sp-2:hover{
+	color: #7DAFFF;
+	border:1px solid #7DAFFF;
+}
+.header .left .sp-2:hover b{
+	background-image: url(img/header-result.png);
+	background-position: 0 -16px;
+}
+.header .left .sp-2 b{
+	/*background-color: red;*/
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin-left: 140px;
+	position: relative;
+	top: 0px;
+	background-image: url(img/header-result.png);
+	background-position: 0 0;
+}
+.header .right{
+	margin-right: 20px;
+	display: inline-block;
+	float: right;
+}
+.header .left .sp-3{
+	margin-right: 22px;
+	position: relative;
+	top: -7px;
+}
+.header .left .sp-3:hover{
+	color:#7DAFFF;
+	cursor: pointer; 
+}
+.header .left input{
+	width: 36px;
+	height: 26px;
+	outline: none;
+	background-color:#464646; 
+	border-radius:5px;
+	color: #fff;
+	border:0;
+	text-align: center;
+	margin-left: 5px;
+	margin-right: 10px;
+
+}
+.header .left input:hover{
+	background-color:#000;
+	cursor: pointer;
+}
+.header .left .in-1{
+	display: inline-block;
+	font-size: 12px;
+	position:relative;
+	top: -8px;
+}
+.header .right .b-1{
+	display: inline-block;
+	width: 20px;
+	height: 22px;
+	background-image: url(img/header-result.png);
+	background-position: 0 -29px;
+	margin-right: 20px;
+	position: relative;
+	top: 6px;
+
+
+}
+.header .right .b-2{
+	display: inline-block;
+	width: 20px;
+	height: 22px;
+	background-image: url(img/header-result.png);
+	background-position: 0 -108px;
+	margin-right: 20px;
+	position: relative;
+	top: 6px;
+
+}
+.header .right .b-3{
+	display: inline-block;
+	width: 22px;
+	height: 24px;
+	background-image: url(img/header-result.png);
+	background-position: 0 -188px;
+	margin-right: 20px;
+	position: relative;
+	top: 7px;
+
+}
+.header .right .b-3:hover{
+	cursor: pointer;
+	background-image: url(img/header-result.png);
+	background-position: 0 -215px;
+
+}
+.header .right .b-4{
+	display: inline-block;
+	width: 24px;
+	height: 28px;
+	background-image: url(img/header-result.png);
+	background-position: 0 -303px;
+	margin-right: 20px;
+	position: relative;
+	top: 7px;
+
+}
+.header .right .b-5{
+	display: inline-block;
+	width: 18px;
+	height: 26px;
+	background-image: url(img/header-result.png);
+	background-position: 0 -336px;
+	margin-right: 20px;
+	position: relative;
+	top: 6px;
+
+}
+.header .right .b-6{
+	display: inline-block;
+	width: 10px;
+	height: 26px;
+	background-image: url(img/header-result.png);
+	background-position: 0 -426px;
+	margin-left: 20px;
+	margin-right: 0px;
+	position:relative;
+	top: 5px;
+
+}
+.header .right .sp-1{
+	display: inline-block;
+	width: 70px;
+	height: 32px;
+	color:#777777; 
+	background-color:#464646;
+	border-radius:16px;
+	text-align: center;
+	line-height: 32px;
+	position: relative;
+	top: 2px;
+
+}
+.header .right .sp1{
+	color: #fff;
+	margin-left: 8px;
+}
+.side-L{
+	border-radius: 13px;
+	position: fixed;
+	top: 75px;
+	left: 20px;
+	width: 56px;
+	height: 492px;
+	padding:0 6px;
+    text-align: center;
+    background-color: #545454;
+
+
+}
+.side-L b{
+	
+	display: inline-block;
+	width:40px; 
+	height:40px;
+	border-radius: 20px;
+	margin-top: 5px;
+	background-image: url(img/elementBar.png);
+
+}
+.side-L b:hover{
+	cursor: pointer;
+	background-color: #7DAFFF;
+}
+.side-L .b-1{
+	position: relative;
+	background-position: -7px -12px;
+}
+.side-L .b-2{
+	position: relative;
+	background-position: -7px -58px;
+}
+.side-L .b-3{
+	position: relative;
+	background-position: -7px -102px;
+}
+.side-L .b-4{
+	position: relative;
+	background-position: -7px -150px;
+}
+.side-L .b-5{
+	position: relative;
+	background-position: -7px -196px;
+}
+.side-L .b-6{
+	position: relative;
+	background-position: -7px -242px;
+}
+.side-L .b-7{
+	position: relative;
+	background-position: -7px -288px;
+}
+.side-L .b-8{
+	position: relative;
+	background-position: -7px -334px;
+}
+.side-L .b-9{
+	position: relative;
+	background-position: -7px -380px;
+}
+.side-L .b-10{
+	position: relative;
+	background-position: -7px -426px;
+}
+.side-R{
+	float: right;
+	border-radius: 13px;
+	position: fixed;
+	width: 100px;
+	height: 410px;
+    text-align: center;
+    background-color: #545454;
+
+}
+.side-R b{
+	display: inline-block;
+	width: 34px;
+	height: 34px;
+	border-radius: 5px;
+	margin-top: 15px;
+	margin-right: 5px;
+	margin-left: 6px;
+	background-image: url(img/menuBar.png);
+
+}
+.side-R .sp-1{
+	display: inline-block;
+	height:40px;
+	width: 100%;
+	line-height: 40px;
+	border-bottom: 1px solid #4A4A4A; 
+}
+.side-R .sp-2{
+	color: #fff;
+	font-size: 13px;
+	margin-top: 15px;
+	display: inline-block;
+	height:40px;
+	width: 100%;
+	line-height: 40px;
+	border-top: 1px solid #4A4A4A; 
+}
+.side-R .b-1{
+	width: 26px;
+	height: 16px;
+	margin-right: 30px;
+	background-color: #545454;
+	background-position: -378px -15px;
+}
+.side-R #title,.bg .con{
+	cursor: move;
+}
+.side-R .b-2{
+	width: 14px;
+	height: 16px;
+	background-color: #545454;
+	background-position: 3px 2px;
+	background-image: url(img/pageMenu.png);
+	
+}
+.side-R .b-3{
+	background-position: -11px -10px;
+}
+.side-R b:hover{
+	cursor: pointer;
+    background-color: #383838;
+}
+.side-R .b-1:hover,.side-R .b-2:hover{
+	cursor: pointer;
+   background-color: #545454;
+}
+
+.side-R .b-4{
+	background-position: -41px -190px;
+}
+.side-R .b-5{
+	background-position: -41px -220px;
+}
+.side-R .b-6{
+	background-position: -40px -40px;
+}
+.side-R .b-7{
+	background-position: -131px -10px;
+}
+.side-R .b-8{
+	background-position: -130px -39px;
+}
+.side-R .b-9{
+	background-position: -131px -69px;
+}
+.side-R .b-10{
+	background-position: -131px -99px;
+}
+.side-R .b-11{
+	background-position:-220px -10px;
+}
+.side-R .b-12{
+	background-position: -221px -69px;
+}
+.side-R .b-13{
+	background-position: -279px -9px;
+}
+.side-R .b-14{
+	background-position: -281px -219px;
+}
+#esc{
+	position: fixed;
+	top: 10px;
+	left: 42%;
+	display: inline-block;
+	width: 200px;
+	height: 38px;
+	color: #989898;
+	font-size: 13px;
+	background-color:#353535;
+	line-height: 38px;
+	text-align: center;
+	border-radius: 5px; 
+	display: none;
+	
+}
+#esc:hover{
+	cursor: pointer;
+	color: #fff; 
+}
+.tip-1{
+	display: none;
+	width:72px;
+	height:44px;
+	background-color: #fff;
+	border-radius: 8px;
+	position: absolute;
+	top:3px;
+	left: 58px;
+	line-height: 44px;  
+}
+.tip-1 .thr{
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border:7px solid rgba(0,0,0,0);
+	border-right: 7px solid #fff;
+	position: absolute;
+	top: 14px;
+	left: -14px;
+}
+.tip-2{
+	display: none;
+	width:72px;
+	height:44px;
+	background-color: #fff;
+	border-radius: 8px;
+	position: absolute;
+	top:52px;
+	left: 58px;
+	line-height: 44px;  
+}
+.tip-2 .thr{
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border:7px solid rgba(0,0,0,0);
+	border-right: 7px solid #fff;
+	position: absolute;
+	top: 14px;
+	left: -14px;
+}
+.tip-3{
+	display: none;
+	width:72px;
+	height:44px;
+	background-color: #fff;
+	border-radius: 8px;
+	position: absolute;
+	top:102px;
+	left: 58px;
+	line-height: 44px;  
+}
+.tip-3 .thr{
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border:7px solid rgba(0,0,0,0);
+	border-right: 7px solid #fff;
+	position: absolute;
+	top: 14px;
+	left: -14px;
+}
+.word{
+	position: fixed;
+	top: 100px;
+	left: 100px;
+	width: 340px;
+	height: 520px;
+	border-radius:8px;
+	display: none; 
+}
+.word .top1{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 340px;
+	height: 50px;
+	background-color: #507ED3;
+	color: #fff;
+	padding:0 10px;
+	line-height: 45px;
+	text-align: left;
+	border-radius:6px 6px 0 0; 
+
+}
+.word .top1 .times{
+	font-size: 25px;
+	float: right;
+}
+.word .top1 .times{
+	cursor: pointer;
+}
+.word .con{
+    margin-top: 50px;
+	height: 380px;
+	width: 340px;
+	overflow:auto;
+	background-color: #fff;
+
+}
+.word .con p{
+	line-height: 100px;
+}
+.word .con .p1{
+	font-size: 50px;
+}
+.word .con .p2{
+	font-size: 40px;
+}
+.word .con .p3{
+	font-size: 35px;
+}
+.word .con .p4{
+	font-size: 28px;
+}
+
+.word .con .p5{
+	font-size: 23px;
+}
+.word .con .p6{
+	font-size: 18px;
+}
+.word .con .p7{
+	font-size: 16px;
+}
+	</style>
+	<script src="jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<div class="header">
+	<div class="left">
+				<span class="sp-1"><img src="img/header-logo.png" alt=""></span>
+				<span class="sp-2">首页<b></b></span>
+				<span class="sp-3">工具</span>
+				<span class="sp-3">网站</span>
+				<span class="sp-3">SEO</span>	
+				<div class="in-1">
+				X:<input type="text" value="0">
+				Y:<input type="text" value="0">
+				W:<input type="text" value="0">
+				H:<input type="text" value="0">
+				</div>
+		</div>
+		<div class="right">
+				<b class="b-1"></b>
+				<b class="b-2"></b>
+				<b class="b-3"></b>
+				<span class="line">
+				<b class="b-4"></b>
+				<b class="b-5"></b>
+				</span>
+				<span class="sp-1">保存</span>
+				<span class="sp-1 sp1">发布</span>
+				<b class="b-6"></b>
+		</div>
+</div>
+<div class="bg">
+	<div class="top">
+		<img src="img/bg3.png" alt="">
+		<ul>
+			<li class="li-1">首页</li>
+			<li>关于我们</li>
+			<li>团队介绍</li>
+			<li>产品欣赏</li>
+			<li>工作环境</li>
+		</ul>
+	</div>
+	<div class="con">
+		<img src="img/bg1.png" alt="" class="img-1">
+		<img src="img/bg.png" alt="" class="img-2">
+		<div class="sp-1"><span>您的梦想需要一个非同凡响的设计</span><br>
+		<span>微设计自由设计, 成就梦想</span></div>
+	</div>
+</div>
+<div class="side-L">
+       <span class="tip-1">
+	   文字
+	      <span class="thr"></span>
+	   </span>
+	   <span class="tip-2">
+	   图片
+	      <span class="thr"></span>
+	   </span>
+	   <span class="tip-3">
+	   按钮
+	      <span class="thr"></span>
+	   </span>
+	   <div class="word">
+	   	 <div class="top1" ><span>文字</span><span class="times">&times;</span></div>
+	   	 <div class="con"> 
+	   	   <p class="p1">标题文字一</p>
+	   	   <p class="p2">标题文字二</p>
+	   	   <p class="p3">标题文字三</p>
+	   	   <p class="p4">标题文字四</p>
+	   	   <p class="p5">正文文本</p>
+	   	   <p class="p6">正文文本</p>
+	   	   <p class="p7">正文文本</p>
+	   	 </div>
+	   </div>
+	<b class="b-1"></b><br>
+	<b class="b-2"></b><br>
+	<b class="b-3"></b><br>
+	<b class="b-4"></b><br>
+	<b class="b-5"></b><br>
+	<b class="b-6"></b><br>
+	<b class="b-7"></b><br>
+	<b class="b-8"></b><br>
+	<b class="b-9"></b><br>
+	<b class="b-10"></b>
+</div>
+<div class="side-R" id="f" style="top:80px; left:1225px;">
+<span class="sp-1" id="title" ><b class="b-1"></b><b class="b-2"></b></span><br>
+<b class="b-3"></b><b class="b-4"></b><br>
+<b class="b-5"></b><b class="b-6"></b><br>
+<b class="b-7"></b><b class="b-8"></b><br>
+<b class="b-9"></b><b class="b-10"></b><br>
+<b class="b-11"></b><b class="b-12"></b><br>
+<b class="b-13"></b><b class="b-14"></b><br>
+<span class="sp-2">帮助</span>
+	
+</div>
+<span id="esc">退出全屏</span>
+   
+	
+</body>
+<script>
+	$(".header .right .b-3").click(function(){
+		$(".header").css("display","none")
+		$(".side-L").css("display","none")
+		$(".side-R").css("display","none")
+		$("#esc").css("display","block")
+		$(".bg").css("margin-top","0")
+	})
+	$("#esc").click(function(){
+		$(".header").css("display","block")
+		$(".side-L").css("display","block")
+		$(".side-R").css("display","block")
+		$("#esc").css("display","none")
+		$(".bg").css("margin-top","50px")
+	 })
+     var sideL=document.getElementsByClassName("side-L")[0];
+     var b1=sideL.getElementsByClassName("b-1")[0];
+	b1.onmouseover=function(){
+		$(this).css("background-color","#7DAFFF")
+		$(".tip-1").css("display","block")
+	}
+	$(".side-L .b-1").mouseleave(function(){
+		$(this).css("background-color","#545454")
+		$(".tip-1").css("display","none")
+	})
+	var sideL=document.getElementsByClassName("side-L")[0];
+    var b2=sideL.getElementsByClassName("b-2")[0];
+	b2.onmouseover=function(){
+		$(".tip-2").css("display","block")
+	}
+	$(".side-L .b-2").mouseleave(function(){
+		$(".tip-2").css("display","none")
+	})
+	var sideL=document.getElementsByClassName("side-L")[0];
+    var b3=sideL.getElementsByClassName("b-3")[0];
+	b3.onmouseover=function(){
+		$(".tip-3").css("display","block")
+	}
+	$(".side-L .b-3").mouseleave(function(){
+		$(".tip-3").css("display","none")
+	})
+	$(".times").click(function(){
+		$(".word").css("display","none")
+		$(".side-L .b-1").css("background-color","#545454")
+	})
+	b1.onclick=function(){
+		$(".word").css("display","block")
+		$(this).css("background-color","#7DAFFF")
+	}
+// div拖曳
+var posX;
+var posY; 
+fdiv = document.getElementById("f"); 
+document.getElementById("title").onmousedown=function(e)
+{
+  posX = e.clientX - parseInt(fdiv.style.left);
+  posY = e.clientY - parseInt(fdiv.style.top);
+  document.onmousemove = mousemove; 
+}
+document.onmouseup = function()
+{
+  document.onmousemove = null;
+}
+function mousemove(ev)
+{
+  fdiv.style.left = (ev.clientX - posX) + "px";
+  fdiv.style.top = (ev.clientY - posY) + "px";
+}
+// 右侧边栏消失
+$(".side-R .b-2").click(function(){
+	$(".side-R").hide();
+})
+</script>
+</html>

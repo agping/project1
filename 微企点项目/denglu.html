@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<style>
+		#s9{
+			font-size: 15px;
+		}
+		#eye{
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			position:absolute;
+			top: 9px;
+			right:99px;
+			cursor: pointer;
+		}
+	</style>
+	<link rel="stylesheet" href="css/denglu.css">
+	<script src="jquery-3.2.1.min.js" ></script>
+	<script type="text/javascript" src="js/md5.js"></script>
+</head>
+<body>
+	<div class="login">
+		<div class="con">
+			<div class="log-1"><img src="img/new_logo.png" alt=""></div>
+			<div class="log-2">
+				<p class="p-1"><span class="sp-1">使用手机或邮箱登录</span></p>
+				<span id="s9"></span>
+				<div class="tel-1"><input type="text" name="userID" placeholder="请输入常用手机号"  onblur="checkTel()"
+					class="in1" id="tel-3" >
+				<span class="tel" id="s5"></span></div>
+
+
+				<div class="in4"><input type="password" name="password"  onblur="checkPwd()" placeholder="请输入密码" class="in2" id="pwd-3" ><br>
+				<span class="sp-1">忘记密码？</span>
+				<span class="pwd" id="s3"></span>
+				<span id="eye"></span>
+				</div>
+				
+				<div class="btn-1"><button type="button" id="btn2">登录</button></div>
+				<div class="btn-2"><a href="zhuce.html" class="a1">注册</a></div>
+				<br>
+				<p class="p-2"><span class="sp-2">使用第三方账号登录</span></p>
+				<div><img src="img/login-qq.png" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/login-wechat.png" alt=""></div>
+				
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+
+				$(".login .log-2 input").focus(function(){
+					$(this).css("color","#333333")
+				})
+				
+				function checkPwd(){
+					var pwd=document.getElementById("pwd-3");
+					var reg=/^[A-Za-z0-9]{6,18}$/
+					var s3=document.getElementById("s3");
+				    if(reg.test(pwd.value)==true){
+				    	s3.innerHTML=" ";
+				    	s3.style.color="green";
+				    	return true;
+				    }else{
+				    	s3.innerHTML=" ";
+				    	s3.innerHTML="密码格式有误"
+				    	s3.style.color="red"
+				    	return false;
+				    }
+				}
+	//验证手机
+				function checkTel(){
+					var tel=document.getElementById("tel-3");
+					var reg=/^1\d{10}$/
+					var s5=document.getElementById("s5");
+				    if(reg.test(tel.value)==true){
+				    	
+				    	s5.innerHTML=" ";
+				    	s5.style.color="green";
+				    	return true;
+				    }else{
+				    	s5.innerHTML=" ";
+				    	s5.innerHTML="手机格式有误"
+				    	s5.style.color="red"
+				    	return false;
+				    }
+				}		
+				var btn=document.getElementById("btn2");
+				btn.onclick=function(){
+				if(checkPwd()&&checkTel()){
+				var tel=document.getElementById("tel-3");
+				var pwd=document.getElementById("pwd-3");
+				var s9=document.getElementById("s9");
+				var s5=document.getElementById("s5");
+				var s6=document.getElementById("s6");
+				var s3=document.getElementById("s3");
+				var xhr = new XMLHttpRequest();
+				var uV = tel.value;//用户名
+				var pV = pwd.value; //密码
+				var pVmd5 = hex_md5(pV);
+				xhr.open("GET","http://datainfo.duapp.com/shopdata/userinfo.php?status=login&userID=" + uV + "&password=" +pV);
+				xhr.send();				
+				xhr.onreadystatechange = function(){
+					if(xhr.status == 200 && xhr.readyState == 4){
+						var res = xhr.responseText;
+						var data = JSON.parse(res);
+					if(uV == data.userID && pVmd5 == data.password){
+						s9.innerHTML = "登录成功，3秒后跳转到首页";
+						s9.style.color="#75CEFF"
+						setTimeout(function(){window.location.href = "index.html";},3000)
+						}else{
+							s9.innerHTML = "用户名或密码错误";
+							s9.style.color="#f00"
+							s5.innerHTML = " ";
+						    s6.innerHTML = " ";
+						    s3.innerHTML = " ";
+						}
+		          }
+	        }	
+   	    }
+   }
+    //眼睛显示
+                 var btn=document.getElementById("eye");
+                 var pass=document.getElementById("pwd-3");
+                 btn.onmousedown=function(){
+                     pass.type="text"
+                 }
+                 btn.onmouseout=function(){
+                     pass.type="password"
+                 }	
+</script>
+</html>
